@@ -160,7 +160,7 @@ class HornRelation(object):
 
 
         # compute pysmt version of the signature
-        env = pysmt.environment.get_env()
+        env = pysmt.environment.reset_env()
         mgr = env.formula_manager
         ctx = z3.get_ctx(None)
         converter = pyz3.Z3Converter(env, ctx)
@@ -208,6 +208,7 @@ class HornRelation(object):
 
 class HornClauseDb(object):
     def __init__(self, name = 'horn'):
+        print("creating a HornDB")
         self._name = name
         self._rules = []
         self._queries = []

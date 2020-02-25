@@ -1,7 +1,7 @@
 ### pretty printer
 import sys
-from .core import CliCmd, add_in_out_args
-from .horndb import HornClauseDb, HornRule, load_horn_db_from_file
+from core import CliCmd, add_in_out_args
+from horndb import HornClauseDb, HornRule, load_horn_db_from_file
 
 import z3
 
